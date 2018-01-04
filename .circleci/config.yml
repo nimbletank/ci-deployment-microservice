@@ -1,0 +1,12 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/ci-deployment-microservice
+    docker:
+      - image: circleci/node:4.8.2
+    steps:
+      - checkout
+      - run:
+          name: CI Webhook
+          command: |
+            echo "CircleCI is working..."
